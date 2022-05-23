@@ -1,14 +1,19 @@
 import './App.css';
+import MenuNavigation from './components/Menu';
 import NavBar from './components/NavBar';
+import ToDos from './pages/ToDoPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <NavBar />
-      </header>
+      <body>
+        <MenuNavigation />
+        {/* <ToDos /> */}
+        
+      </body>
     </div>
   );
 }
 
 export default App;
+
