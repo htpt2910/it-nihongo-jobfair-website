@@ -26,7 +26,7 @@ const items = [
   getItem('面接', 'sub1', <MailOutlined />, [
     getItem('よくある質問', '1', <PieChartOutlined />),
     getItem('準備', '2', <DesktopOutlined />),
-    getItem('質問解答方法', '3', <ContainerOutlined />),
+    getItem('質問解答方法', '3', <ContainerOutlined /> ,onClick =>{() => this.hide} ),
   ]),
   getItem('日本', 'sub2', <AppstoreOutlined />, [
     getItem('会社で先輩の本当の体験', '9'),
@@ -43,7 +43,7 @@ const NavBar = () => {
   return (
     <div
       style={{
-        width: 256,
+        width: 256, height: 256
       }}
     >
       <Button
