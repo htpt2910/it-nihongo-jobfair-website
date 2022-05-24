@@ -3,7 +3,6 @@ import ToDoListData from "../data/ToDoList";
 import CustomButton from "../components/button/CustomButton";
 import { PlusSquareOutlined } from '@ant-design/icons';
 import ToDoItems from "../components/todoList/ToDoItems";
-import YourList from "../components/todoList/YourList";
 import { Link } from "react-router-dom";
 
 function ToDos ({hasList}) {

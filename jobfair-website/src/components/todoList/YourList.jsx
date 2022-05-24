@@ -1,9 +1,7 @@
 import { Button, Typography } from "antd";
 import { useState } from "react";
 import StaticList from "../../data/staticList";
-import CustomButton from "../button/CustomButton";
 import ToDoItems from "./ToDoItems";
-import { PlusSquareOutlined } from '@ant-design/icons';
 import ToDoListData from "../../data/ToDoList";
 import { Link } from "react-router-dom";
 
