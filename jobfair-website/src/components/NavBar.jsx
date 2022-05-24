@@ -10,6 +10,7 @@ import {
   ContainerOutlined,
   MailOutlined,
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -22,17 +23,19 @@ function getItem(label, key, icon, children, type) {
 }
 
 const items = [
-  
   getItem('面接', 'sub1', <MailOutlined />, [
     getItem('よくある質問', '1', <PieChartOutlined />),
     getItem('準備', '2', <DesktopOutlined />),
     getItem('質問解答方法', '3', <ContainerOutlined />),
   ]),
-  getItem('日本', 'sub2', <AppstoreOutlined />, [
-    getItem('会社で先輩の本当の体験', '9'),
+  getItem('アカウント', 'sub2', <AppstoreOutlined />, [
+    getItem('サインイン', '4'),
+    getItem('サインアップ', '5'),
   ]),
 ];
 
+const itemOnClick = ({key}) => {
+}
 const NavBar = () => {
   const [collapsed, setCollapsed] = React.useState(false);
 
@@ -40,6 +43,7 @@ const NavBar = () => {
     setCollapsed(!collapsed);
   };
 
+  
   return (
     <div
       style={{
