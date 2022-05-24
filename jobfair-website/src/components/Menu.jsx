@@ -8,9 +8,10 @@ import {
   import { Layout, Menu } from 'antd';
   import React, { useState } from 'react';
   import 'antd/dist/antd.min.css';
+  import { Link } from 'react-router-dom';
   const { Header, Sider, Content } = Layout;
   
-  const MenuNavigation = () => {
+  const MenuNavigation = ({component}) => {
     const [collapsed, setCollapsed] = useState(false);
     return (
       <Layout>
@@ -19,35 +20,34 @@ import {
           <Menu
             theme="dark"
             mode="inline"
-            defaultSelectedKeys={['1']}
-            items={[
-              {
-                key: '1',
-                icon: <UserOutlined />,
-                label: 'よくある質問',
-              },
-              {
-                key: '2',
-                icon: <VideoCameraOutlined />,
-                label: '準備',
-              },
-              {
-                key: '3',
-                icon: <UploadOutlined />,
-                label: '質問解答方法',
-              },
-              {
-                key: '4',
-                icon: <UploadOutlined />,
-                label: 'サインイン',
-              },
-              {
-                key: '5',
-                icon: <UploadOutlined />,
-                label: 'サインアップ',
-              },
-            ]}
-          />
+            defaultSelectedKeys={['2']}
+          >
+            <Menu.Item key="1">
+              <MenuFoldOutlined />
+              <span>よくある質問</span>
+              <Link to="/fqask" />
+            </Menu.Item>
+            <Menu.Item key="2">
+                <UploadOutlined />
+                <span>準備</span>
+                <Link to="/todo" />
+            </Menu.Item>
+            <Menu.Item key="3">
+                <UploadOutlined />
+                <span>質問解答方法</span>
+                <Link to="/kaitou" />
+            </Menu.Item>
+            <Menu.Item key="4">
+                <UploadOutlined />
+                <span>サインイン</span>
+                <Link to="/" />
+            </Menu.Item>
+            <Menu.Item key="5">
+                <UploadOutlined />
+                <span>サインアップ</span>
+                <Link to="/signup" />
+            </Menu.Item>            
+          </Menu>
         </Sider>
         <Layout className="site-layout">
           <Header
@@ -69,7 +69,7 @@ import {
               minHeight: 280,
             }}
           >
-            Content
+            {component}
           </Content>
         </Layout>
       </Layout>

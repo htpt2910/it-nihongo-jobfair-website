@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import App from "./App";
-import ToDoPage from "./pages/ToDoPage"
+import MenuNavigation from "./components/Menu";
 // import your route components too
 
 const root = ReactDOM.createRoot(
@@ -13,15 +13,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        {/* <Route index element={<Home />} /> */}
-        <Route path="teams" element={<ToDoPage />}>
-          {/* <Route path=":teamId" element={<Team />} />
-          <Route path="new" element={<NewTeamForm />} />
-          <Route index element={<LeagueStandings />} /> */}
-        </Route>
-      </Route>
-    </Routes>
+    <MenuNavigation component={<App/>} />
   </BrowserRouter>
 );
