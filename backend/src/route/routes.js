@@ -8,5 +8,7 @@ module.exports = app => {
     // Create a new test user route
     router.get("/test", test_user.getAlluser);
 
+
+
     app.use('/api', router);
 };
