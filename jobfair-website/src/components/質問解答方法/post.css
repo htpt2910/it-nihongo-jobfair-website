@@ -1,6 +1,5 @@
 .col-sm-9{
-    margin-left: 250px;
-    margin-top: -218px;
+    margin-left: 150px;
 }
 .box_status{
     background-color: #ffffff;
@@ -9,7 +8,10 @@
     box-shadow: 2px 2px 2px rgb(230, 230, 230), -2px 2px 2px rgb(230, 230, 230);
     border: 1px solid rgb(211, 211, 211);
 }
-
+li{
+    margin-left: 20px;
+    list-style-type: none;
+}
 .a_status{
     padding: .6rem 2rem;
     background-color: #F0F2F5;
